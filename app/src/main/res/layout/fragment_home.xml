@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+    android:layout_weight="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="top|left"
+
+            android:layout_width="32dp"
+            android:layout_weight="0.75"
+            android:padding="1dp"
+            android:layout_height="32dp"
+            android:src="@drawable/profile" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:textColor="?colorPrimary"
+            android:textSize="20dp"
+            android:lineHeight="25.4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="Welcome Back Khaled!"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.25"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/assistent_act_text"
+        android:drawableLeft="@drawable/robot_icon_primary"
+        android:paddingLeft="140dp"
+        android:fontFamily="sans-serif"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:layout_marginLeft="20dp"
+        android:text="Assistant"
+        android:textSize="14dp"
+        android:lineHeight="20dp"
+        android:layout_gravity="center"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:textColor="?colorPrimary"
+        android:background="@drawable/primary_outline_bg"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/movetoMycourses"
+        android:textSize="15dp"
+        android:lineHeight="20dp"
+        android:layout_gravity="start|bottom"
+
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+
+        android:textColor="@color/black"
+        android:gravity="start|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="My Courses"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/my_courses_recyclerview"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:listitem="@layout/my_courses_recyclerview"
+        tools:itemCount="1"
+        app:spanCount="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.75"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"
+        android:src="@drawable/recyclerview_indicator_icon"/>
+
+
+    <TextView
+        android:textSize="15dp"
+        android:lineHeight="20dp"
+        android:layout_gravity="start|bottom"
+
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+
+        android:textColor="@color/black"
+        android:gravity="start|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:text="Recommended Courses"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/add_recommended_recyclerview"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:listitem="@layout/add_recommended_course_recyclerview"
+        tools:itemCount="1"
+        android:layout_gravity="center"
+        app:spanCount="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.75"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"
+        android:src="@drawable/recyclerview_indicator_icon"/>
+
+
+</LinearLayout>

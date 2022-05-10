@@ -198,6 +198,7 @@
         android:layout_marginRight="15dp"
         android:backgroundTint="?colorPrimary">
         <TextView
+            android:onClick="MovetoHome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Sign In"
@@ -237,6 +238,7 @@
             android:lineHeight="24dp"
             android:letterSpacing="0.1"/>
         <TextView
+            android:onClick="MovetoSignup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"

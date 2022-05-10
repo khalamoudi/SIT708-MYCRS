@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    tools:context=".VerificationActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineHeight="24dp"
+        android:text="One Last Step"
+        android:textColor="?colorPrimary"
+        android:textSize="24dp"
+        android:textStyle="normal" />
+
+    <TextView
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:lineHeight="17dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:justificationMode="inter_word"
+        android:text="you will recive OTP code on the phone number and email you entered erlier please enter the otp below"
+        android:textColor="#AEAEB2"
+        android:textSize="15dp"
+        android:textStyle="normal"/>
+
+    <TextView
+
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:lineHeight="17dp"
+        android:text="Resend again"
+        android:textColor="?colorPrimary"
+        android:textSize="14dp"
+        android:textStyle="normal"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:cursorVisible="true"
+        android:hint="Hint."
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:itemBackground="@drawable/verify_bg"
+        android:padding="4dp"
+        android:textColor="?colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/black"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="60dp"
+        android:layout_weight="1"
+        app:itemRadius="10dp"
+        app:itemSpacing="12dp"
+        app:itemWidth="43dp"
+
+        app:lineWidth="1dp"
+        app:viewType="rectangle" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:onClick="VerficationCode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="?colorPrimary"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="?colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Verify"
+            android:lineHeight="24dp"
+
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="5.55"/>
+
+
+</LinearLayout>

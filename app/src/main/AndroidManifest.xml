@@ -10,6 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EducationApp">
         <activity
+            android:name=".CourseAddedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseDetailPaidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BotRecommendationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyCoursesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PhoneVerifiedActivity"
+            android:exported="false" />
+        <activity
             android:name=".PasswordUpdatedActivity"
             android:exported="false" />
         <activity

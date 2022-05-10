@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class PasswordUpdatedActivity extends AppCompatActivity {
+public class VerificationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_password_updated);
+        setContentView(R.layout.activity_verification);
     }
 
-    public void MovetoLogin(View view) {
-        Intent intent = new Intent(PasswordUpdatedActivity.this , LoginActivity.class);
+    public void VerficationCode(View view) {
+        Intent intent = new Intent(VerificationActivity.this , PhoneVerifiedActivity.class);
         startActivity(intent);
-    }
-
-    public void moveBack(View view) {
     }
 }

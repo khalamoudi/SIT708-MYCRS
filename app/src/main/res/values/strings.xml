@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EducationApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="let_us_help_you">Let Us Help you!</string>
+    <string name="keep_up_the_good_work">Keep Up the good work!</string>
 </resources>

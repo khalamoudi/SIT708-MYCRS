@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:weightSum="10"
+        android:layout_height="100dp">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:lineHeight="23.4dp"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="Search"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:weightSum="10"
+
+        android:layout_height="80dp">
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="?colorPrimary"
+            android:lineHeight="28.4dp"
+            android:layout_weight="4"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:layout_height="match_parent"
+            android:text="let us \n help you"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.45"/>
+
+        <androidx.cardview.widget.CardView
+            android:padding="5dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:backgroundTint="?colorPrimary"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/robot_icon_white"
+                android:text="Assistant"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+        <TextView
+            android:textSize="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:lineHeight="16dp"
+            android:layout_gravity="start|bottom"
+
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+
+            android:textColor="@color/black"
+            android:gravity="start|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search courses"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+
+            android:background="@drawable/bg"
+            android:layout_marginLeft="20dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"></EditText>
+
+        <TextView
+            android:textSize="15dp"
+            android:lineHeight="20dp"
+            android:layout_gravity="start|bottom"
+
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+
+            android:textColor="@color/black"
+            android:gravity="start|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Recommended Courses"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/add_recommended_recyclerview_search"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:listitem="@layout/add_recommended_course_recyclerview"
+            tools:itemCount="1"
+            android:layout_gravity="center"
+            app:spanCount="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/recyclerview_indicator_icon"/>
+
+
+
+        <TextView
+            android:id="@+id/movetoMycourses"
+            android:textSize="15dp"
+            android:lineHeight="20dp"
+            android:layout_gravity="start|bottom"
+
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+
+            android:textColor="@color/black"
+            android:gravity="start|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Related To your field"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/my_courses_recyclerview_search"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:listitem="@layout/my_courses_recyclerview"
+            tools:itemCount="1"
+            app:spanCount="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/recyclerview_indicator_icon"/>
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

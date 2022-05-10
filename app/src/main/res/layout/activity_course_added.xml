@@ -6,24 +6,24 @@
     android:orientation="vertical"
     android:weightSum="10"
     android:layout_height="match_parent"
-    tools:context=".PasswordUpdatedActivity">
+    tools:context=".CourseAddedActivity">
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="3.25"/>
+        android:layout_weight="3.5"/>
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="0dp"
-        android:src="@drawable/password_updated"
+        android:src="@drawable/course_added"
         android:layout_gravity="center"
 
         android:layout_weight="2.5"/>
 
 
     <TextView
-        android:onClick="MovetoLogin"
+        android:onClick="moveBack"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -32,7 +32,7 @@
         android:textStyle="bold"
         android:fontFamily="sans-serif"
         android:textColor="?colorPrimary"
-        android:text="Password Updated"
+        android:text="Course Added"
         android:textSize="24dp"
         android:lineHeight="30dp"
         />
@@ -40,6 +40,6 @@
     <View
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="3.25"/>
+        android:layout_weight="3"/>
 
 </LinearLayout>

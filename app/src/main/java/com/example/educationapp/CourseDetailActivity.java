@@ -8,31 +8,21 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class LoginActivity extends AppCompatActivity {
+public class CourseDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_course_detail);
     }
 
-    public void ResetPassword(View view) {
-        Intent intent = new Intent(LoginActivity.this , ResetPasswordActivity.class);
-        startActivity(intent);
-    }
+    public void CourseAdding(View view) {
 
-    public void MovetoSignup(View view) {
-        Intent intent = new Intent(LoginActivity.this , SignupActivity.class);
-        startActivity(intent);
-    }
-
-    public void MovetoHome(View view) {
-        Intent intent = new Intent(LoginActivity.this , MainActivity.class);
+        Intent intent = new Intent(CourseDetailActivity.this, CourseAddedActivity.class);
         startActivity(intent);
     }
 }
