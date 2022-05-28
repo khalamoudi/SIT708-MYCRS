@@ -9,9 +9,9 @@
                 android:centerY="1.0"
                 android:endColor="#0d1522"
                 android:angle="270"
+                android:type="linear"
                 />
-            <corners
-                android:radius="10dp" />
+
         </shape>
     </item>
 

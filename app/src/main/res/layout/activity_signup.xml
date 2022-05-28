@@ -56,26 +56,26 @@
         android:layout_weight="0.25"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:text="Login using google account"
-        android:textColor="?colorSecondary"
-        android:fontFamily="sans-serif"
-        android:textAllCaps="false"
-        android:textSize="14dp"
-        android:textStyle="normal"
-        android:lineHeight="24dp"
-        android:paddingLeft="65dp"
-        android:paddingRight="55dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/google_signin_bg"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:drawableLeft="@drawable/google_icon"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginGoogleAccount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/google_signin_bg"
+            android:drawableLeft="@drawable/google_icon"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:lineHeight="24dp"
+            android:paddingLeft="65dp"
+            android:paddingRight="55dp"
+            android:text="Login using google account"
+            android:textAllCaps="false"
+            android:textColor="?colorSecondary"
+            android:textSize="14dp"
+            android:textStyle="normal" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -140,25 +140,26 @@
         android:lineHeight="17dp"
         android:letterSpacing="0.1"/>
 
-    <EditText
-        android:inputType="text"
-        android:paddingLeft="15dp"
-        android:textSize="16dp"
-        android:lineHeight="24dp"
-        android:letterSpacing="0.125"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="?colorPrimary"
-        android:drawablePadding="15dp"
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="sans-serif"
 
-        android:textColorHint="?colorSecondary"
-        android:state_window_focused="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/bg" />
+            android:inputType="text"
+            android:letterSpacing="0.125"
+            android:lineHeight="24dp"
+            android:paddingLeft="15dp"
+            android:state_window_focused="true"
+            android:textColor="?colorPrimary"
+            android:textColorHint="?colorSecondary"
+            android:textSize="16dp"
+            android:textStyle="normal" />
 
 
     <View
@@ -181,25 +182,25 @@
         android:lineHeight="17dp"
         android:letterSpacing="0.1"/>
 
-    <EditText
-        android:inputType="textEmailAddress"
-        android:paddingLeft="15dp"
-        android:textSize="16dp"
-        android:lineHeight="24dp"
-        android:letterSpacing="0.125"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="?colorPrimary"
-        android:drawablePadding="15dp"
-
-        android:textColorHint="?colorSecondary"
-        android:state_window_focused="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/bg" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="sans-serif"
+            android:inputType="textEmailAddress"
+            android:letterSpacing="0.125"
+            android:lineHeight="24dp"
+            android:paddingLeft="15dp"
+            android:state_window_focused="true"
+            android:textColor="?colorPrimary"
+            android:textColorHint="?colorSecondary"
+            android:textSize="16dp"
+            android:textStyle="normal" />
 
     <View
         android:layout_width="wrap_content"
@@ -221,25 +222,25 @@
         android:lineHeight="17dp"
         android:letterSpacing="0.1"/>
 
-    <EditText
-        android:inputType="textPhonetic"
-        android:paddingLeft="15dp"
-        android:textSize="16dp"
-        android:lineHeight="24dp"
-        android:letterSpacing="0.125"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="?colorPrimary"
-        android:drawablePadding="15dp"
-
-        android:textColorHint="?colorSecondary"
-        android:state_window_focused="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/bg" />
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="sans-serif"
+            android:inputType="textPhonetic"
+            android:letterSpacing="0.125"
+            android:lineHeight="24dp"
+            android:paddingLeft="15dp"
+            android:state_window_focused="true"
+            android:textColor="?colorPrimary"
+            android:textColorHint="?colorSecondary"
+            android:textSize="16dp"
+            android:textStyle="normal" />
 
 
     <View
@@ -262,27 +263,28 @@
         android:lineHeight="17dp"
         android:letterSpacing="0.1"/>
 
-    <EditText
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textSize="16dp"
-        android:drawableRight="@drawable/show_pass_icon"
-        android:paddingRight="20dp"
-        android:lineHeight="24dp"
-        android:letterSpacing="0.125"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="?colorPrimary"
-        android:drawablePadding="15dp"
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg"
+            android:drawableRight="@drawable/show_pass_icon"
+            android:drawablePadding="15dp"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
 
-        android:textColorHint="?colorSecondary"
-        android:state_window_focused="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/bg" />
+            android:letterSpacing="0.125"
+            android:lineHeight="24dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:state_window_focused="true"
+            android:textColor="?colorPrimary"
+            android:textColorHint="?colorSecondary"
+            android:textSize="16dp"
+            android:textStyle="normal" />
 
     <View
         android:layout_width="wrap_content"
@@ -304,27 +306,28 @@
         android:lineHeight="17dp"
         android:letterSpacing="0.1"/>
 
-    <EditText
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textSize="16dp"
-        android:drawableRight="@drawable/show_pass_icon"
-        android:paddingRight="20dp"
-        android:lineHeight="24dp"
-        android:letterSpacing="0.125"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="?colorPrimary"
-        android:drawablePadding="15dp"
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/bg"
+            android:drawableRight="@drawable/show_pass_icon"
+            android:drawablePadding="15dp"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
 
-        android:textColorHint="?colorSecondary"
-        android:state_window_focused="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/bg" />
+            android:letterSpacing="0.125"
+            android:lineHeight="24dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:state_window_focused="true"
+            android:textColor="?colorPrimary"
+            android:textColorHint="?colorSecondary"
+            android:textSize="16dp"
+            android:textStyle="normal" />
 
     <View
         android:layout_width="wrap_content"
@@ -332,8 +335,7 @@
         android:layout_weight="0.25"/>
 
     <com.google.android.material.card.MaterialCardView
-
-        android:onClick="AccountCreate"
+        android:id="@+id/createAccount"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.7"
@@ -342,18 +344,19 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:backgroundTint="?colorPrimary">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Create Account"
-            android:lineHeight="24dp"
-            android:textStyle="normal"
             android:layout_gravity="center"
-            android:gravity="center"
             android:fontFamily="sans-serif"
-            android:textSize="18dp"
+            android:gravity="center"
+            android:lineHeight="24dp"
+            android:text="Create Account"
+            android:textColor="@color/white"
 
-            android:textColor="@color/white"/>
+            android:textSize="18dp"
+            android:textStyle="normal" />
     </com.google.android.material.card.MaterialCardView>
 
 
@@ -369,18 +372,19 @@
         android:layout_weight="0.75">
 
         <TextView
+            android:id="@+id/signInAccount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
             android:layout_weight="6"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical|end"
+            android:letterSpacing="0.1"
+            android:lineHeight="24dp"
             android:maxLines="1"
             android:text="already have account?"
-            android:layout_gravity="center_vertical|start"
-            android:gravity="center_vertical|end"
-            android:fontFamily="sans-serif"
             android:textColor="#AEAEB2"
-            android:textSize="14dp"
-            android:lineHeight="24dp"
-            android:letterSpacing="0.1"/>
+            android:textSize="14dp" />
         <TextView
             android:onClick="MovetoSignin"
             android:layout_width="0dp"

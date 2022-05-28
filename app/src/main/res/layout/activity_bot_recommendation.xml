@@ -1,288 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:weightSum="10"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BotRecommendationActivity">
 
-    <View
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Assistant"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--recycler view to display our chats-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVChats"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"/>
+        android:layout_above="@id/idLLMessage"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/assistent_rcommended_courses_recyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/assistent_rcommended_courses_recyclerview"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:padding="14dp"
+        android:visibility="gone"
+        android:src="@drawable/recyclerview_indicator_icon"
+        app:layout_constraintBottom_toTopOf="@+id/idLLMessage"
+        app:layout_constraintEnd_toEndOf="@+id/assistent_rcommended_courses_recyclerview"
+        app:layout_constraintStart_toStartOf="@+id/assistent_rcommended_courses_recyclerview" />
 
 
     <LinearLayout
-        android:layout_weight="1"
+        android:id="@+id/idLLMessage"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:weightSum="10"
-        android:layout_height="0dp">
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
+        <!--edit text to enter message-->
+        <EditText
+            android:id="@+id/idEdtMessage"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:padding="12dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:tint="@color/black" />
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="Enter Message" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:lineHeight="23.4dp"
-            android:layout_weight="6"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_height="match_parent"
-            android:text="Assistant"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"/>
+        <!--button to send message-->
+        <ImageButton
+            android:id="@+id/idIBSend"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@drawable/send_message_icon" />
 
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7.25">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_marginLeft="20dp"
-        android:outlineProvider="none"
-        android:layout_width="32dp"
-        android:translationZ="1dp"
-        android:layout_marginBottom="-15dp"
-        app:cardCornerRadius="50dp"
-        android:layout_height="32dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/robot_icon_primary"
-            android:padding="4dp"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="24dp"
-        android:layout_gravity="start"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="100dp"
-        android:backgroundTint="?colorPrimary"
-        android:padding="10dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:textSize="14dp"
-            android:layout_width="match_parent"
-            android:textColor="@color/white"
-            android:text="What intrestes you?"
-            android:layout_height="match_parent"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="24dp"
-        android:layout_gravity="end"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="#D0CFFF"
-        android:padding="10dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:textSize="14dp"
-            android:layout_width="match_parent"
-            android:textColor="#5856D6"
-            android:text="Software and networking"
-            android:layout_height="match_parent"/>
-
-    </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_marginLeft="20dp"
-                android:outlineProvider="none"
-                android:layout_width="32dp"
-                android:translationZ="1dp"
-                android:layout_marginBottom="-15dp"
-                app:cardCornerRadius="50dp"
-                android:layout_height="32dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/robot_icon_primary"
-                    android:padding="4dp"/>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                app:cardCornerRadius="24dp"
-                android:layout_gravity="start"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="?colorPrimary"
-                android:padding="10dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:textSize="14dp"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/white"
-                    android:text="How Old Are You?"
-                    android:layout_height="match_parent"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                app:cardCornerRadius="24dp"
-                android:layout_gravity="end"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="#D0CFFF"
-                android:padding="10dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:textSize="14dp"
-                    android:layout_width="match_parent"
-                    android:textColor="#5856D6"
-                    android:text="35"
-                    android:layout_height="match_parent"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_marginLeft="20dp"
-                android:outlineProvider="none"
-                android:layout_width="32dp"
-                android:translationZ="1dp"
-                android:layout_marginBottom="-15dp"
-                app:cardCornerRadius="50dp"
-                android:layout_height="32dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/robot_icon_primary"
-                    android:padding="4dp"/>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                app:cardCornerRadius="24dp"
-                android:layout_gravity="start"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="?colorPrimary"
-                android:padding="10dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_marginLeft="20dp"
-                    android:lineHeight="16dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:textSize="14dp"
-                    android:layout_width="match_parent"
-                    android:textColor="@color/white"
-                    android:text="Here Are the most recommended physics courses"
-                    android:layout_height="match_parent"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:textSize="15dp"
-                android:lineHeight="20dp"
-                android:layout_gravity="start|bottom"
-
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:textStyle="bold"
-
-                android:textColor="@color/black"
-                android:gravity="start|bottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Recommended Courses"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-
-                android:id="@+id/assistent_rcommended_courses_recyclerview"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                tools:listitem="@layout/recommended_course_recyclerview"
-                tools:itemCount="1"
-                android:layout_gravity="center"
-                app:spanCount="1"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:padding="14dp"
-
-                android:layout_gravity="center"
-                android:src="@drawable/recyclerview_indicator_icon"/>
-
-
-        </LinearLayout>
-    </ScrollView>
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.75"
-        android:background="@drawable/bg"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:hint="Answer"
-        android:textColorHint="#AEAEB2"
-        android:drawableRight="@drawable/send_message_icon"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

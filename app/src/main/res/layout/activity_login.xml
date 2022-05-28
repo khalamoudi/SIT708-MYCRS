@@ -86,18 +86,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.35"
-        android:text="Username or Mail"
         android:layout_gravity="center_vertical"
-        android:gravity="center_vertical"
-        android:fontFamily="sans-serif"
-        android:textColor="?colorSecondary"
         android:layout_marginLeft="20dp"
-        android:textSize="14dp"
+        android:layout_weight="0.35"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:letterSpacing="0.1"
         android:lineHeight="17dp"
-        android:letterSpacing="0.1"/>
+        android:text="Username or Mail"
+        android:textColor="?colorSecondary"
+        android:textSize="14dp" />
 
     <EditText
+        android:id="@+id/userLoginEmail"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
         android:textSize="16dp"
@@ -139,26 +140,27 @@
         android:letterSpacing="0.1"/>
 
     <EditText
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        android:textSize="16dp"
-        android:drawableRight="@drawable/show_pass_icon"
-        android:paddingRight="20dp"
-        android:lineHeight="24dp"
-        android:letterSpacing="0.125"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal"
-        android:textColor="?colorPrimary"
-        android:drawablePadding="15dp"
-
-        android:textColorHint="?colorSecondary"
-        android:state_window_focused="true"
+        android:id="@+id/userLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/bg" />
+        android:layout_weight="0.7"
+        android:background="@drawable/bg"
+        android:drawableRight="@drawable/show_pass_icon"
+        android:drawablePadding="15dp"
+        android:fontFamily="sans-serif"
+        android:inputType="textPassword"
+
+        android:letterSpacing="0.125"
+        android:lineHeight="24dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp"
+        android:state_window_focused="true"
+        android:textColor="?colorPrimary"
+        android:textColorHint="?colorSecondary"
+        android:textSize="16dp"
+        android:textStyle="normal" />
 
     <View
         android:layout_width="wrap_content"
@@ -197,19 +199,21 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:backgroundTint="?colorPrimary">
+
         <TextView
-            android:onClick="MovetoHome"
+            android:id="@+id/userLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Sign In"
-            android:lineHeight="24dp"
-            android:textStyle="normal"
             android:layout_gravity="center"
-            android:gravity="center"
             android:fontFamily="sans-serif"
-            android:textSize="18dp"
+            android:gravity="center"
+            android:lineHeight="24dp"
+            android:onClick="MovetoHome"
+            android:text="Sign In"
+            android:textColor="@color/white"
 
-            android:textColor="@color/white"/>
+            android:textSize="18dp"
+            android:textStyle="normal" />
     </com.google.android.material.card.MaterialCardView>
 
 
@@ -309,6 +313,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginUsingGoogleAccount"
         android:text="Login using google account"
         android:textColor="?colorSecondary"
         android:fontFamily="sans-serif"

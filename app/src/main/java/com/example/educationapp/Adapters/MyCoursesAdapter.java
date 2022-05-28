@@ -11,22 +11,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.educationapp.Models.PredictResponse;
+import com.example.educationapp.Models.RecommendationItem;
 import com.example.educationapp.R;
+
+import java.util.ArrayList;
 
 
 public class MyCoursesAdapter extends RecyclerView.Adapter<MyCoursesAdapter.MyViewHolder> {
 
-
-
     Context context;
-    private int serialCount =1;
-    int count;
+    ArrayList<String> addArraylist;
 
-
-    public MyCoursesAdapter(Context context, int count ) {
-
+    public MyCoursesAdapter(Context context, ArrayList<String> addArraylist) {
         this.context = context;
-        this.count = count;
+        this.addArraylist = addArraylist;
     }
 
     @Override
@@ -38,37 +37,30 @@ public class MyCoursesAdapter extends RecyclerView.Adapter<MyCoursesAdapter.MyVi
         return vh;
     }
 
-
-
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-
-
+        String user=addArraylist.get(position);
+        holder.courseName.setText(user);
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
             }
         });
     }
-
-
     @Override
     public int getItemCount() {
-        return count;
+        return addArraylist.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
         // init the item view's
-        TextView serialNo,name;
-        ImageView image;
-
-
+        TextView courseName,rating,price;
         public MyViewHolder(View itemView) {
             super(itemView);
 
+            courseName = itemView.findViewById(R.id.nameCourse);
+            rating = itemView.findViewById(R.id.ratingAdded);
         }
     }
 }

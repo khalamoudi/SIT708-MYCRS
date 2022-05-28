@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+
+
+    app:cardCornerRadius="16dp"
+    android:layout_marginBottom="10dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="163dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cyber_security_img">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:padding="10dp"
+            android:background="@drawable/courses_gradient">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7.5"/>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/minus_sign_img"
+                    android:layout_height="match_parent"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:src="@drawable/plus_sign_img"
+                    android:layout_height="match_parent"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/courseName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical|start"
+                android:lineHeight="20.5dp"
+                android:text="Vue.js advanced"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:padding="2dp"
+                android:weightSum="10">
+
+                <TextView
+
+                    android:id="@+id/courseRating"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3.5"
+                    android:background="@drawable/white_background"
+                    android:gravity="center"
+                    android:lineHeight="20.5dp"
+                    android:text="10 Lessons"
+                    android:textColor="?colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.25"/>
+
+                <TextView
+
+                    android:visibility="gone"
+                    android:id="@+id/coursePrice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.25"
+                    android:gravity="center_vertical|end"
+                    android:lineHeight="20.5dp"
+                    android:text="$40"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

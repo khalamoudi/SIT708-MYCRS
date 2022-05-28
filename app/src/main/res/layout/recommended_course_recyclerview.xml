@@ -40,6 +40,7 @@
                     android:layout_weight="7.5"/>
 
                     <ImageView
+                        android:id="@+id/deleteRecommendation"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:src="@drawable/minus_sign_img"
@@ -52,6 +53,7 @@
                     android:layout_weight="0.25"/>
 
                 <ImageView
+                    android:id="@+id/addRecommendation"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:src="@drawable/plus_sign_img"
@@ -71,16 +73,17 @@
                 android:layout_weight="2"/>
 
             <TextView
+                android:id="@+id/courseName"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="2"
                 android:gravity="center_vertical|start"
                 android:lineHeight="20.5dp"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold"
+                android:text="Vue.js advanced"
                 android:textColor="@color/white"
-                android:textSize="16dp"
-                android:text="Vue.js advanced"/>
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,19 +91,21 @@
                 android:layout_weight="2.5"
                 android:padding="2dp"
                 android:weightSum="10">
+
                 <TextView
 
+                    android:id="@+id/courseRating"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
                     android:layout_weight="3.5"
+                    android:background="@drawable/white_background"
                     android:gravity="center"
                     android:lineHeight="20.5dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/white_background"
-                    android:textStyle="bold"
+                    android:text="10 Lessons"
                     android:textColor="?colorPrimary"
-                    android:textSize="12dp"
-                    android:text="10 Lessons"/>
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="0dp"
@@ -109,17 +114,18 @@
 
                 <TextView
 
+                    android:id="@+id/coursePrice"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2.25"
                     android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.25"
                     android:gravity="center_vertical|end"
                     android:lineHeight="20.5dp"
-                    android:layout_marginRight="10dp"
-                    android:textStyle="bold"
+                    android:text="$40"
                     android:textColor="@color/white"
-                    android:textSize="24dp"
-                    android:text="$40"/>
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

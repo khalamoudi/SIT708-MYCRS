@@ -10,22 +10,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.educationapp.Models.RecommendationItem;
 import com.example.educationapp.R;
+
+import java.util.ArrayList;
 
 
 public class RecommendedCoursesAdapter extends RecyclerView.Adapter<RecommendedCoursesAdapter.MyViewHolder> {
 
-
-
     Context context;
-    private int serialCount =1;
-    int count;
+    ArrayList<RecommendationItem> recommendationItems;
 
 
-    public RecommendedCoursesAdapter(Context context,int count ) {
-
+    public RecommendedCoursesAdapter(Context context, ArrayList<RecommendationItem> recommendationItems) {
         this.context = context;
-        this.count = count;
+        this.recommendationItems = recommendationItems;
     }
 
     @Override
@@ -42,7 +41,10 @@ public class RecommendedCoursesAdapter extends RecyclerView.Adapter<RecommendedC
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-
+        RecommendationItem user=recommendationItems.get(position);
+        holder.courseName.setText(user.getCoursename());
+        holder.rating.setText(user.getRating());
+        holder.price.setText(user.getPrice());
 
         // implement setOnClickListener event on item view.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -53,20 +55,18 @@ public class RecommendedCoursesAdapter extends RecyclerView.Adapter<RecommendedC
         });
     }
 
-
     @Override
     public int getItemCount() {
-        return count;
+        return recommendationItems.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
         // init the item view's
-        TextView serialNo,name;
-        ImageView image;
-
-
+        TextView courseName,rating,price;
         public MyViewHolder(View itemView) {
             super(itemView);
-
+            courseName=itemView.findViewById(R.id.courseName);
+            rating=itemView.findViewById(R.id.courseRating);
+            price=itemView.findViewById(R.id.coursePrice);
         }
     }
 }
